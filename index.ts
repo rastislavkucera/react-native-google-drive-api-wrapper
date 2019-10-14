@@ -9,7 +9,7 @@ declare namespace GDrive {
         createFileMultipart: (media: string, mediaType: string, metadata: any, isBase64: boolean) => Promise<Response>,
         download: (fileID: string, params: any) => Promise<Response>,
         list: (queryParams: Object) => Promise<Response>,
-        safeCreateFolder: (metadata: {name: string, parents: string[], createdTime: string}) => string,
+        safeCreateFolder: (metadata: {name: string, parents: string[], createdTime: string}) => Promise<string>,
     };
 }
 
