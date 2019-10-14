@@ -6,9 +6,9 @@ declare namespace GDrive {
     export const accessToken: string;
 
     export const files: {
-        createFileMultipart: (media: string, mediaType: string, metadata: any, isBase64: boolean) => Promise<GlobalFetch>,
-        download: (fileID: string, params: any) => Promise<GlobalFetch>,
-        list: (queryParams: string) => Promise<GlobalFetch>,
+        createFileMultipart: (media: string, mediaType: string, metadata: any, isBase64: boolean) => Promise<Response>,
+        download: (fileID: string, params: any) => Promise<Response>,
+        list: (queryParams: Object) => Promise<Response>,
         safeCreateFolder: (metadata: {name: string, parents: string[]}) => string,
     };
 }
